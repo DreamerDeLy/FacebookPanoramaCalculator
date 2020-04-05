@@ -21,18 +21,20 @@ namespace FacebookPanoramaCalculator
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			int height = Int32.Parse(tb1.Text);
-			int width = Int32.Parse(tb1.Text);
+			long height = Int32.Parse(tb1.Text);
+			long width = Int32.Parse(tb2.Text);
 
-			int fv = Int32.Parse(tb3.Text);
+			long fv = Int32.Parse(tb3.Text);
 
-			int width_full = (360 * width) / fv;
-			int height_full = width_full / 2;
+			//MessageBox.Show($"{height} ; {width} ; {fv}");
 
-			int cp_left = (width_full - width) / 2;
-			int cp_top = (height_full - height) / 2;
+			long width_full = (360 * width) / fv;
+			long height_full = width_full / 2;
 
-			string pattern = $"<GPano:CroppedAreaImageHeightPixels>{height}</GPano:CroppedAreaImageHeightPixels>\n< GPano:CroppedAreaImageWidthPixels >{width}</ GPano:CroppedAreaImageWidthPixels >\n< GPano:FullPanoHeightPixels >{height_full}</ GPano:FullPanoHeightPixels >\n< GPano:FullPanoWidthPixels >{width_full}</ GPano:FullPanoWidthPixels >\n< GPano:CroppedAreaLeftPixels >{cp_left}</ GPano:CroppedAreaLeftPixels >\n< GPano:CroppedAreaTopPixels >{cp_top}</ GPano:CroppedAreaTopPixels >";
+			long cp_left = (width_full - width) / 2;
+			long cp_top = (height_full - height) / 2;
+
+			string pattern = $"<x:xmpmeta xmlns:x =\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        \">\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n<rdf:Description rdf:about=\"\" xmlns:GPano=\"http://ns.google.com/photos/1.0/panorama/\">\n<GPano:CroppedAreaImageHeightPixels>{height}</GPano:CroppedAreaImageHeightPixels>\n<GPano:CroppedAreaImageWidthPixels>{width}</GPano:CroppedAreaImageWidthPixels>\n<GPano:FullPanoHeightPixels >{height_full}</GPano:FullPanoHeightPixels>\n<GPano:FullPanoWidthPixels>{width_full}</GPano:FullPanoWidthPixels>\n<GPano:CroppedAreaLeftPixels>{cp_left}</GPano:CroppedAreaLeftPixels>\n<GPano:CroppedAreaTopPixels>{cp_top}</GPano:CroppedAreaTopPixels>\n</rdf:Description>\n</rdf:RDF>\n</x:xmpmeta >";
 
 			richTextBox1.Text = pattern;
 		}

@@ -56,6 +56,7 @@
 			this.tb1.Name = "tb1";
 			this.tb1.Size = new System.Drawing.Size(133, 20);
 			this.tb1.TabIndex = 1;
+			this.tb1.Text = "1080";
 			this.tb1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb1_KeyPress);
 			// 
 			// tb2
@@ -64,6 +65,7 @@
 			this.tb2.Name = "tb2";
 			this.tb2.Size = new System.Drawing.Size(133, 20);
 			this.tb2.TabIndex = 2;
+			this.tb2.Text = "3240";
 			this.tb2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb2_KeyPress);
 			// 
 			// label1
@@ -99,10 +101,14 @@
 			this.tb3.Name = "tb3";
 			this.tb3.Size = new System.Drawing.Size(133, 20);
 			this.tb3.TabIndex = 6;
+			this.tb3.Text = "250";
 			this.tb3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb3_KeyPress);
 			// 
 			// richTextBox1
 			// 
+			this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.richTextBox1.Location = new System.Drawing.Point(196, 12);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(409, 130);
