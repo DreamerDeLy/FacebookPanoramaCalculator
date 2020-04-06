@@ -71,6 +71,8 @@ namespace FacebookPanoramaCalculator
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			button1.PerformClick();
+
 			string[] result_strings = new[] { richTextBox1.Text };
 
 			Regex regEx = new Regex("[A-Za-z0-9_-]*[.]*[A-Za-z0-9]{3,4}");
