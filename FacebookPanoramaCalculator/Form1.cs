@@ -38,6 +38,11 @@ namespace FacebookPanoramaCalculator
 
 			if (fv == 360) pattern = $"<x:xmpmeta xmlns:x =\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        \">\n<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n<rdf:Description rdf:about=\"\" xmlns:GPano=\"http://ns.google.com/photos/1.0/panorama/\">\n<GPano:CroppedAreaImageHeightPixels>{height}</GPano:CroppedAreaImageHeightPixels>\n<GPano:CroppedAreaImageWidthPixels>{width}</GPano:CroppedAreaImageWidthPixels>\n<GPano:FullPanoHeightPixels >{height_full}</GPano:FullPanoHeightPixels>\n<GPano:FullPanoWidthPixels>{width_full}</GPano:FullPanoWidthPixels>\n</rdf:Description>\n</rdf:RDF>\n</x:xmpmeta >";
 
+			if (fv > 360) MessageBox.Show("FV can't be higher than 360!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			if (fv < 0) MessageBox.Show("FV can't be less than 360!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+			if (cp_left < 0 || cp_top < 0) MessageBox.Show("Incorrect size values!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 			richTextBox1.Text = pattern;
 		}
 
