@@ -145,6 +145,7 @@
 			this.Controls.Add(this.button1);
 			this.MinimumSize = new System.Drawing.Size(320, 191);
 			this.Name = "Form1";
+			this.ShowIcon = false;
 			this.Text = "Facebook 360 calculator";
 			this.ResumeLayout(false);
 			this.PerformLayout();
